@@ -6,6 +6,7 @@ class Application
 
     if req.path.match(/items/)
       item_search = req.path.split("/items/").last
+      #item_found = @@items.find{}
       if @@items.include?(item_search)
         resp.write "Item price: #{item_search.price}"
       else
